@@ -14,7 +14,13 @@ function verify(){
     } else{
         var fsex = document.getElementsByName(`radsex`) // [1] ou [0] 0 homem 1 mulher; NOe tem q ser igual senão o sistema deixa maracar os dois e não deixa desmaracar
         let idade = (ano_atual - ano)
-        res.innerHTML = `Idade calculada é de ${idade} anos`
+      //\z res.innerHTML = `Idade calculada é de ${idade} anos`
+
+        var img = document.createElement('img')  // criando o lugar foto
+        img.setAttribute('id', 'foto')
+
+
+
 
         var genero = ''
         
@@ -44,15 +50,19 @@ function verify(){
 
             if(idade<=10){
                 //crianca
+                img.setAttribute('srx', 'criancaM.png')
 
             }else if(idade<=18){
                 //adolescente
+                img.setAttribute('src', 'adolescenteM.png')
 
             } else if(idade <=60){
                 //adulto 
+                img.setAttribute('src', 'adultoM.png')
 
             }else{
-                //idoso
+                //idosa
+                img.setAttribute('src', 'idosa.png')
             }
 
 
@@ -60,32 +70,13 @@ function verify(){
         } 
        
 
-        var img = document.createElement('img')
-        img.setAttribute('id', 'foto')
-        
-     /*   if(genero == 'Mulher'){
-                         
-           
-     /  } else if(genero == 'Homem'){
-
-            if(idade<=10){
-                //crianca
-                img.setAttribute('src', 'crianaH.png')
-
-            }else if(idade<=18){
-                //adolescente
-
-            } else if(idade <=60){
-                //adulto 
-
-            }else{
-                //idoso
-            }
-        }
- */       
-        res.innerHTML = `Detectamos que você é ${genero} com ${idade} anos`
-        res.appendChild(img)  //adicionar elemento
-        
        
+        
+        res.innerHTML = `Detectamos que você é ${genero} com ${idade} anos`
+        res.appendChild(img)  //adicionar elemento no caso a foto 
+
+        console.log(img)
+        
+       console.log(genero)
     }
 }    

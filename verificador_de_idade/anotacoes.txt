@@ -1,0 +1,7 @@
+var img = dcoument.createElemente(img) // para criar elemento imagem
+
+
+res.appendCHilg(img) // para inserir a imagem no corpo do site 
+
+
+img.setAttribute('src', 'nomeDoArquivo.png') // colocar determinada foto dentro do elemento img
