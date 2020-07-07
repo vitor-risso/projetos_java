@@ -27,19 +27,27 @@ function verify(){
         if(fsex[0].checked){
             genero = 'Homem'
 
-            if(idade<=10){
-                //crianca
-                img.setAttribute('src', 'crianaH.png')
-            } else if(idade <= 18){
-                //adolescente
-                img.setAttribute('src', 'adolescenteH.png')
-            } else if(idade<=60){
-                     //adulto 
-                img.setAttribute('src', 'adultoH.png')
-            } else {
-                //idoso
-                img.setAttribute('src' , 'idoso.png')
-            }
+            switch(idade){
+                case (idade <= 10): 
+                      // crianca 
+                      img.setAttribute('src', 'crianaH.png')
+                      break; 
+               
+                case idade <= 18:
+                    //adolescente 
+                    img.setAttribute('src', 'adolescenteH.png')
+                    break;
+               
+               case idade <= 60:
+                    //adulto 
+                    img.setAttribute('src', 'adultoH.png')
+                    break;
+               
+               default:
+                    //idoso 
+                    img.setAttribute('src' , 'idoso.png')
+                     break;
+               }
             
             
 
