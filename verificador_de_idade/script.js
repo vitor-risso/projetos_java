@@ -20,16 +20,28 @@ function verify(){
         
         if(fsex[0].checked){
             genero = 'Homem'
+
+            if(idade<=10){
+                //crianca
+                img.setAttribute('src', 'crianaH.png')
+            } else if(idade <= 18){
+                //adolescente
+                img.setAttribute('src', 'adolescenteH.png')
+            } else if(idade<=60){
+                     //adulto 
+                img.setAttribute('src', 'adultoH.png')
+            } else {
+                //idoso
+                img.setAttribute('src' , 'idoso.png')
+            }
+            
+            
+
+
+
         }  else if(fsex[1].checked){
             genero='Mulher'
-        } 
-        res.innerHTML = `Detectamos que você é ${genero} com ${idade} anos`
 
-        var img = document.createElement('img')
-        img.setAttribute('id', 'foto')
-        
-        if(genero == 'Mulher'){
-                         
             if(idade<=10){
                 //crianca
 
@@ -42,7 +54,19 @@ function verify(){
             }else{
                 //idoso
             }
-        } else if(genero == 'Homem'){
+
+
+
+        } 
+       
+
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto')
+        
+     /*   if(genero == 'Mulher'){
+                         
+           
+     /  } else if(genero == 'Homem'){
 
             if(idade<=10){
                 //crianca
@@ -58,8 +82,9 @@ function verify(){
                 //idoso
             }
         }
-        
-        
+ */       
+        res.innerHTML = `Detectamos que você é ${genero} com ${idade} anos`
+        res.appendChild(img)  //adicionar elemento
         
        
     }
