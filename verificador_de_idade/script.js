@@ -6,8 +6,8 @@ function verify(){
     var ano = Number(tipo.value)           //conversão string ~ number
     var res = document.getElementById(`res`)
 
-    console.log( `${ano_atual}`)
-    console.log(' ola' )
+    // console.log( `${ano_atual}`)
+    // console.log(' ola' )
 
     if(ano === 0 || ano > ano_atual){
         window.alert(`[ERRO]  Verifique os dados e tente novamente`)
@@ -23,13 +23,20 @@ function verify(){
 
 
         var genero = ''
+
+        var bb = 10 
+        var jovem = 18
+        var adulto = 60
+    
         
         if(fsex[0].checked){
             genero = 'Homem'
 
-            switch(idade){
+            switch(idade ){
+
                 case (idade <= 10): 
                       // crianca 
+                      console.log("crinaca")
                       img.setAttribute('src', 'crianaH.png')
                       break; 
                
@@ -56,8 +63,9 @@ function verify(){
         }  else if(fsex[1].checked){
             genero='Mulher'
 
-            if(idade<=10){
+            if( idade<=10 ){
                 //crianca
+                console.log(crianca)
                 img.setAttribute('srx', 'criancaM.png')
 
             }else if(idade<=18){
@@ -83,8 +91,8 @@ function verify(){
         res.innerHTML = `Detectamos que você é ${genero} com ${idade} anos`
         res.appendChild(img)  //adicionar elemento no caso a foto 
 
-        console.log(img)
+       // console.log(img)
         
-       console.log(genero)
+       // console.log(genero)
     }
-}    
+}
