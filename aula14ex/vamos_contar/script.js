@@ -26,6 +26,6 @@ function iniciar(){
 
     res.innerHTML += (`->bandeira de final<-`)
 
-    
+    .
 
 }
