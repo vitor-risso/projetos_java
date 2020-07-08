@@ -18,6 +18,7 @@ function verify(){
 
        
         var genero = ''
+<<<<<<< HEAD
 
         var img = document.createElement('img')  // criando o lugar foto
         img.setAttribute('id', 'foto')
@@ -26,6 +27,10 @@ function verify(){
         var jovem = 18
         var adulto = 60
     
+=======
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto')
+>>>>>>> 03d0d0532f5056d194ca83cac8ae4633174daaed
         
         if(fsex[0].checked){
             genero = 'Homem'
@@ -64,6 +69,7 @@ function verify(){
 
             if( idade<=10 ){
                 //crianca
+<<<<<<< HEAD
                 console.log(crianca)
                 img.setAttribute('srx', 'criancaM.png')
 
@@ -77,6 +83,18 @@ function verify(){
 
             }else{
                 //idosa
+=======
+                img.setAttribute('src' , 'criancaM.png')
+
+            }else if(idade<=18){
+                //adolescente
+                img.setAttribute('src' , 'adolescenteM.png')
+            } else if(idade <=60){
+                //adulto 
+                img.setAttribute('src' , 'adultoM.png')
+            }else{
+                //idoso 
+>>>>>>> 03d0d0532f5056d194ca83cac8ae4633174daaed
                 img.setAttribute('src', 'idosa.png')
             }
 
@@ -87,6 +105,11 @@ function verify(){
 
        
         
+<<<<<<< HEAD
+=======
+
+     
+>>>>>>> 03d0d0532f5056d194ca83cac8ae4633174daaed
         res.innerHTML = `Detectamos que você é ${genero} com ${idade} anos`
         res.appendChild(img)  //adicionar elemento no caso a foto 
 
