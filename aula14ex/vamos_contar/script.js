@@ -9,23 +9,35 @@ function iniciar(){
     var pas = document.getElementById('passo')
     var passo = Number(pas.value)
 
-    // console.log(`${fim}`)  testando componentes
+    console.log(`${fim}`)  //testando componentes
+    console.log(passo)
+    console.log(comeco)
 
-    var res = documet.getElementById(`res`)
 
-    if(passo == 0){
+    var res = document.querySelector(`div#res`) 
+
+    res.innerHTML = (``)
+    
+
+    if(passo === 0){
         window.alert('Passo inválido vamos usar 1')
         passo = 1
     }
 
-    do{
-        res.innerHTML = (`Contando. . .`)
-        res.innerHTML += (`${inicio}  ->emogi<-`)
-        inicio = inicio + passo 
-    } while(incio <= fim )
+   if(fim > comeco){
 
-    res.innerHTML += (`->bandeira de final<-`)
 
-    .
+   while (comeco < fim){
+        res.innerHTML += (`${comeco}  👉`)
+        comeco = comeco + passo 
+
+    }
+
+    res.innerHTML += (`${fim}🏁`)
+
+   } else{
+       res.innerHTML=('Digite um valor válido')
+   }
+    
 
 }
