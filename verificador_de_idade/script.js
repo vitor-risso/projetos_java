@@ -16,13 +16,11 @@ function verify(){
         let idade = (ano_atual - ano)
       //\z res.innerHTML = `Idade calculada é de ${idade} anos`
 
+       
+        var genero = ''
+
         var img = document.createElement('img')  // criando o lugar foto
         img.setAttribute('id', 'foto')
-
-
-
-
-        var genero = ''
 
         var bb = 10 
         var jovem = 18
@@ -34,13 +32,13 @@ function verify(){
 
             switch(idade ){
 
-                case (idade <= 10): 
+                case (idade == 5): 
                       // crianca 
                       console.log("crinaca")
                       img.setAttribute('src', 'crianaH.png')
                       break; 
                
-                case idade <= 18:
+                case (idade <= jovem):
                     //adolescente 
                     img.setAttribute('src', 'adolescenteH.png')
                     break;
@@ -54,6 +52,7 @@ function verify(){
                     //idoso 
                     img.setAttribute('src' , 'idoso.png')
                      break;
+
                }
             
             
