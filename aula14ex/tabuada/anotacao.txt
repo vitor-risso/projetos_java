@@ -1,0 +1,10 @@
+ <select name="tabuada" id="tabs" size="10">                              // cria a area de seleção 
+                   <option value="v1">valor1</option>                     //cria as opções da area de seleção (obs: deixar entre o select)
+               </select>
+
+
+
+
+
+
+document.createElement('option')  // criando option atraves do html 
