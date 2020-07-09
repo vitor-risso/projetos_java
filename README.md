@@ -20,4 +20,8 @@ Projeto que constitue em a pessoa infromar a idade e o gênero dela e o programa
 Esse projeto constitui em o usuario digitar o inicio de uma contagem e o final dela e tambem de quanto em quanto ele quer que essa contagem apareça. a resposta e colocada no sistema por meio de JS (a sequencia de numeros) intercalando um numero e
  um emoji no final o emji sera substituido por umas bandeira quadriculada
 
+# Tabuada 
+
+Nesse projeto usei tencologioas novas como select e options para criar uma 'tabelinha' onde os resultados seriam impressos. criei o options por meio $
+
  
