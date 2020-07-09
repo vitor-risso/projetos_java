@@ -1,6 +1,6 @@
 function adicionar(){
     var res = document.getElementById(`res`)
-    var n = document.getElementById(`txt`)
+    var n = document.getElementById(`txt`) 
     var num = Number(n.value) 
     var jan = document.getElementById(`janela`)
 
@@ -8,8 +8,9 @@ function adicionar(){
         window.alert('Digite um número valido')
     } else{
          
-        for (var i = 0; o <100, i++){
-            console.log(`${num[i]}`)
+        for (var i = num; i <100, i++){
+            i = [num]
+            console.log(`${i.length}`)
         }
        
         let txt = document.createElement('option')
